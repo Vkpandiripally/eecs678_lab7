@@ -7,8 +7,19 @@
 /**
   Priqueue Data Structure
 */
+
+typedef struct Node
+{
+  int data;
+  int priority;
+  struct Node *next;
+
+} Node;
+
 typedef struct _priqueue_t
 {
+  Node *top;
+  int (*comparer)(void *, void *);
 
 } priqueue_t;
 
